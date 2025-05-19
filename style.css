@@ -82,7 +82,7 @@ body{
   #menu>span{
     display: inline-block;
     border: solid white 1.5px;
-    width: 70%;
+    width: 40%;
   }
   #check{
     cursor: pointer;
@@ -92,9 +92,10 @@ body{
     z-index: 2;
     height: 100%;
     left: -20%;
-    opacity: 0%;
+    opacity: 0;
   }
   #xR{
+    transition: 1s;
     display: inline-block;
     border: solid white 1.5px;
     position: absolute;
@@ -104,19 +105,18 @@ body{
     top: 60%;
     z-index: 1;
     opacity: 0%;
-    transition: all 1s;
   }
     #xL{
-    display: inline-block;
-    border: solid rgb(255, 255, 255) 1.5px;
-    width: 10%;
-    transform: rotateZ(45deg);
-    position: absolute;
-    left: 1000%;
-    top: 60%;
-    z-index: 1;
-    opacity: 0%;
-    transition: all 1s;
+      transition: 1s;
+      display: inline-block;
+      border: solid rgb(255, 255, 255) 1.5px;
+      width: 10%;
+      transform: rotateZ(45deg);
+      position: absolute;
+      left: 1000%;
+      top: 60%;
+      z-index: 1;
+      opacity: 0%;  
   }
   #menu-open{
     transition: all 1s;
@@ -132,15 +132,15 @@ body{
     position: absolute;
     left: 250%;
   }
-  #check:checked{
-    left: 250%;
-  }
   #check:checked~#xR{
     opacity: 1;
-    left: 270%;
+    left: 300%;
   }
   #check:checked~#xL{
     opacity: 1;
+    left: 300%;
+  }
+  #check:checked{
     left: 270%;
   }
   #check:hover~#xR{
@@ -148,4 +148,15 @@ body{
   }
     #check:hover~#xL{
     border-color: #d6a04c;
+  }
+  #menuLi{
+    margin-top: 50%;
+    color: white;
+    list-style-type: none;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0;
+  }
+  #menuLi > li{
+    margin-bottom: 7%;
   }
